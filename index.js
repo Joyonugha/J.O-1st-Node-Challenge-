@@ -7,34 +7,55 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
   {
     type: 'input',
-    name: 'name',
-    message: 'What is your name?',
+    title: 'title',
+    message: 'What is the title of your project?',
   },
   {
     type: 'input',
-    name: 'location',
-    message: 'Where are you from?',
+    sections: 'sections entitled',
+    message: 'Are you able to list the questions entitled(Yes or No)?',
   },
   {
     type: 'input',
-    name: 'hobby',
-    message: 'What is your favorite hobby?',
+    description: 'description',
+    message: 'Can you please describe your project?',
   },
   {
     type: 'input',
-    name: 'food',
-    message: 'What is your favorite food?',
+    tableOfContents: 'table of content',
+    message: 'Could you please list the table of contents in the order that it appears?',
   },
   {
     type: 'input',
-    name: 'github',
-    message: 'Enter your GitHub Username',
+    installation: 'installation',
+    message: 'How do you install it',
   },
   {
     type: 'input',
-    name: 'location',
-    message: 'Where do you live?',
+    usage: 'usage',
+    message: 'How do you use it?',
   },
+  {type: 'list',
+    license: 'license',
+    message: 'What license would you like to use for this project?',
+    choices: ['MIT', 'Apache  2.0', 'GPL v3', 'Other'],
+  },
+  {
+    type: 'input',
+    contributing: 'contributing',
+    message: 'If you would like to contrubute please follow these steps',
+  },
+  {
+    type: 'input',
+    tests: 'tests',
+    message: 'How can your project be tested?',
+  },
+  {
+    type: 'input',
+    questions: 'questions',
+    message: 'if you have any questions please follow these steps and',
+  },
+  
 ];
 
 // function to write README file

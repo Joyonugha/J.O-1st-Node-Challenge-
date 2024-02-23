@@ -1,12 +1,2 @@
-# J.O ReadMe-Generator
-* This is 
+# Joy
 
-* Sections entitled:
-      * Description 
-      * Table of Contents 
-      * Installation 
-      * Usage 
-      * License 
-      * Contributing 
-      * Tests 
-      * Questions

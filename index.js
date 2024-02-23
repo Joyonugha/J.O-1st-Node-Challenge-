@@ -9,42 +9,42 @@ const promptUser = () =>
   {
     type: 'input',
     title: 'title',
-    message: 'What is the title of your project?',
+    questions: 'What is the title of your project?',
   },
   {
     type: 'input',
     sections: 'sections entitled',
-    message: 'Are you able to list the questions entitled(Yes or No)?',
+    questions: 'Are you able to list the questions entitled(Yes or No)?',
   },
   {
     type: 'input',
     description: 'description',
-    message: 'Can you please describe your project?',
+    questions: 'Can you please describe your project?',
   },
   {
     type: 'input',
     tableOfContents: 'table of content',
-    message: 'Could you please list the table of contents in the order that it appears?',
+    questions: 'Could you please list the table of contents in the order that it appears?',
   },
   {
     type: 'input',
     installation: 'installation',
-    message: 'How do you install it',
+    questions: 'How do you install it',
   },
   {
     type: 'input',
     usage: 'usage',
-    message: 'How do you use it?',
+    questions: 'How do you use it?',
   },
   {type: 'list',
     license: 'license',
-    message: 'What license would you like to use for this project?',
+    questions: 'What license would you like to use for this project?',
     choices: ['MIT', 'Apache  2.0', 'GPL v3', 'Other'],
   },
   {
     type: 'input',
     contributing: 'contributing',
-    message: 'If you would like to contrubute please follow these steps',
+    questions: 'If you would like to contrubute please follow these steps',
   },
   {
     type: 'input',
@@ -58,6 +58,7 @@ const promptUser = () =>
   },
   
 ]);
+
 // function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => { //Ref Link: https://www.geeksforgeeks.org/node-js-fs-writefile-method/
@@ -70,7 +71,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((answers) => { //Ref Link: https://www.geeksforgeeks.org/node-js-fs-writefile-method/
         const markdown = generateMarkdown(answers);
-        writeToFile('README.md', markdown);
+        writeToFile('README.md', generateMarkdown);
       });
 
 }
@@ -78,6 +79,16 @@ function init() {
 // function call to initialize program
 init();
 
+generateMarkdown()
+
 //function to call the prompt code
 promptUser()
+inquirer.prompt()
+
+// .then((answers) => writeFileAsync('', generateMarkdown(answers)))
+ 
+  
+  
+  
+
 //function to call the generatemarkdown and answers

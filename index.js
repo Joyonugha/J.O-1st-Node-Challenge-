@@ -80,7 +80,7 @@ function init() {
 // function call to initialize program
 init();
 
-generateMarkdown()
+// generateMarkdown()
 
 // .then((answers) => writeFileAsync('', generateMarkdown(answers)))
  

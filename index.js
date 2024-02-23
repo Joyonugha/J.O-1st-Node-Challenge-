@@ -54,7 +54,7 @@ let questions = [
   },
   {
     type: 'input',
-    questions: 'questions',
+    title: 'questions',
     message: 'if you have any questions please follow these steps and',
   },
   

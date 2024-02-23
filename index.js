@@ -4,51 +4,52 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-const promptUser = () =>
-  inquirer.prompt([
+let questions = [
+    
   {
     type: 'input',
     title: 'title',
-    questions: 'What is the title of your project?',
+    message: 'What is the title of your project?',
   },
   {
     type: 'input',
-    sections: 'sections entitled',
-    questions: 'Are you able to list the questions entitled(Yes or No)?',
+    title: 'sections entitled',
+    message: 'Are you able to list the questions entitled(Yes or No)?',
   },
   {
     type: 'input',
-    description: 'description',
-    questions: 'Can you please describe your project?',
+    title: 'description',
+    message: 'Can you please describe your project?',
   },
   {
     type: 'input',
-    tableOfContents: 'table of content',
-    questions: 'Could you please list the table of contents in the order that it appears?',
+    title: 'table of content',
+    message: 'Could you please list the table of contents in the order that it appears?',
   },
   {
     type: 'input',
-    installation: 'installation',
-    questions: 'How do you install it',
+    title: 'installation',
+    message: 'How do you install it',
   },
   {
     type: 'input',
-    usage: 'usage',
-    questions: 'How do you use it?',
+    title: 'usage',
+    message: 'How do you use it?',
   },
-  {type: 'list',
-    license: 'license',
-    questions: 'What license would you like to use for this project?',
+  {
+    type: 'list',
+    title: 'license',
+    message: 'What license would you like to use for this project?',
     choices: ['MIT', 'Apache  2.0', 'GPL v3', 'Other'],
   },
   {
-    type: 'input',
-    contributing: 'contributing',
-    questions: 'If you would like to contrubute please follow these steps',
+    question: 'input',
+    title: 'contributing',
+    message: 'If you would like to contrubute please follow these steps',
   },
   {
     type: 'input',
-    tests: 'tests',
+    title: 'tests',
     message: 'How can your project be tested?',
   },
   {
@@ -57,7 +58,7 @@ const promptUser = () =>
     message: 'if you have any questions please follow these steps and',
   },
   
-]);
+];
 
 // function to write README file
 function writeToFile(fileName, data) {
@@ -80,10 +81,6 @@ function init() {
 init();
 
 generateMarkdown()
-
-//function to call the prompt code
-promptUser()
-inquirer.prompt()
 
 // .then((answers) => writeFileAsync('', generateMarkdown(answers)))
  

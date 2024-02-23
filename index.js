@@ -2,9 +2,13 @@ const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const writeFileAsync = util.promisify(fs.writeFile); //Ref: previous exercise from classwork
+
+
 
 // array of questions for user
-const questions = [
+const promptUser = () =>
+  inquirer.prompt([
   {
     type: 'input',
     title: 'title',
@@ -56,8 +60,7 @@ const questions = [
     message: 'if you have any questions please follow these steps and',
   },
   
-];
-
+]);
 // function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => { //Ref Link: https://www.geeksforgeeks.org/node-js-fs-writefile-method/

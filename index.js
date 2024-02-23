@@ -2,9 +2,6 @@ const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
-const writeFileAsync = util.promisify(fs.writeFile); //Ref: previous exercise from classwork
-
-
 
 // array of questions for user
 const promptUser = () =>
@@ -80,3 +77,7 @@ function init() {
 
 // function call to initialize program
 init();
+
+//function to call the prompt code
+promptUser()
+//function to call the generatemarkdown and answers

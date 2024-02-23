@@ -14,7 +14,7 @@ const questions = [
   {
     type: 'input',
     name: 'sections entitled',
-    message: 'Are you able to list the questions entitled(Yes or No)?',
+    message: 'Could you please list the sections entitled?',
   },
   {
     type: 'input',
@@ -45,7 +45,7 @@ const questions = [
   {
     question: 'input',
     name: 'contributing',
-    message: 'If you would like to contrubute please follow these steps',
+    message: 'If you would like to contribute please follow these steps',
   },
   {
     type: 'input',

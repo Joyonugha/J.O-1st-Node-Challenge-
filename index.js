@@ -9,21 +9,21 @@ const questions = [
     name: 'title',
     message: 'What is the title of your project?',
   },
-  {
-    type: 'input',
-    name: 'sectionsEntitled',
-    message: 'Could you please list the sections entitled?',
-  },
+  // {
+  //   type: 'input',
+  //   name: 'sectionsEntitled',
+  //   message: 'Could you please list the sections entitled?',
+  // },
   {
     type: 'input',
     name: 'description',
     message: 'Can you please describe your project?',
   },
-  {
-    type: 'input',
-    name: 'tableOfContents',
-    message: 'Could you please list the table of contents in the order that it appears?',
-  },
+  // {
+  //   type: 'input',
+  //   name: 'tableOfContents',
+  //   message: 'Could you please list the table of contents in the order that it appears?',
+  // },
   {
     type: 'input',
     name: 'installation',
@@ -33,6 +33,7 @@ const questions = [
     type: 'input',
     name: 'usage',
     message: 'How do you use it?',
+
   },
   {
     type: 'list',

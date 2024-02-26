@@ -4,7 +4,11 @@ function generateMarkdown(answers) {
   // This generates license badge URL based on user's license choice
   const licenseBadgeUrl = `https://img.shields.io/badge/License-${answers.license}-blue`;
 
-  // Generate README content
+   // This would generate GitHub profile link
+   const githubProfileLink = `https://github.com/${answers.githubUsername}`;
+
+
+  // This would generate README content
   return `
 # ${answers.title}
 
@@ -38,6 +42,7 @@ This project is licensed under the ${answers.license} License.
 
 ## Questions
 * If you have any questions about the project, you can contact me at ${answers.email} or visit my GitHub profile at https://github.com/${answers.githubUsername}.
+* Please feel free to visit my [GitHub profile](${githubProfileLink}) for more information.
   `;
 }
 
